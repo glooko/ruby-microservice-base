@@ -6,7 +6,7 @@ services:
     ports: 
       - "2300:2300"
     volumes:
-      - ../:/app:cached
+      - ./:/app:cached
 
   swagger-ui:
     image: swaggerapi/swagger-ui

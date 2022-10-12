@@ -2,8 +2,8 @@ FROM ruby:3.1.2-bullseye
 
 RUN apt-get update -qq && apt-get install -y nodejs
 
-WORKDIR /apps
-COPY . /apps
+WORKDIR /app
+COPY . /app
 
 RUN bundle install
 
