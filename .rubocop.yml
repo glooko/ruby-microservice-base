@@ -131,3 +131,4 @@ Gemspec/RequireMFA:
 
 RSpec/MultipleMemoizedHelpers:
   Max: 10
+  

@@ -16,3 +16,6 @@
 
 # Ignore code coverage folder
 coverage/
+
+.vscode
+.idea

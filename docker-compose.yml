@@ -15,4 +15,4 @@ services:
       - "8080:8080"
     environment:
       API_URL: http://localhost:2300/apidocs
-    
+      
