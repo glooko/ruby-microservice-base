@@ -6,7 +6,7 @@ module Base::Swagger::Actions::Apidocs::Index
   def self.included(action)
     action.class_eval do
       swagger_root do
-        key :swagger, '2.0'
+        key :openapi, '3.0.0'
         info do
           key :version, '1.0.0'
           key :title, 'Swagger Base authorization'

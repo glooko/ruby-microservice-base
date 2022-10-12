@@ -22,6 +22,7 @@ This is a base ruby hanami development environment.
 * Swagger blocks: [Swagger blocks](https://github.com/fotinakis/swagger-blocks)
 * Alba: [Alba documentation](https://okuramasafumi.github.io/alba/)
 * Mongoid: [Mongoid documentation](https://www.mongodb.com/docs/mongoid/current/)
+* Puma web server: [Puma](https://puma.io/)
 
 ## Project setup
 
@@ -72,3 +73,7 @@ COVERAGE=true bundle exec rake
 * [http://localhost:2300](http://localhost:2300)
 * [Health check](http://localhost:2300/health)
 * [Swagger UI](http://localhost:8080)
+
+### Building swagger docs
+
+We need to have SwaggerBlocks for each action in addition to the action class. Same is required for models. Also we need to add all SwaggerBlocks in SWAGGERED_CLASSES in apidocs index action. For more info check [Swagger blocks](https://github.com/fotinakis/swagger-blocks)
