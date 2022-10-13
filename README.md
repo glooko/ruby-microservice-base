@@ -34,6 +34,14 @@ This is a base ruby hanami development environment.
 
 * The provided `Dockerfile` installs only the requirements needed for the app to run
 * The `compose.yml` file mounts the root project as a volume so its contents and any changes are accessible immediately in the container for in-container development
+* The compose.yml file overrides the Dockerfile command to reload the server when changes are detected in app
+
+### Setup config environment variables 
+
+```
+<from project root>
+cp .env.example .env
+```
 
 #### Build container
 
@@ -65,6 +73,15 @@ docker compose down
 <from project root>
 COVERAGE=true bundle exec rake
 ```
+
+### Tests folder structure
+
+Folder        | Test type
+------------- | -------------
+spec/base/    | Unit tests for app folder. Tests folder structure should follow app folder.
+spec/lib/     | Unit tests for lib folder. Tests folder structure should follow lib folder.
+spec/request/ | Request tests
+spec/system/  | System tests
 
 ## Running the app
 

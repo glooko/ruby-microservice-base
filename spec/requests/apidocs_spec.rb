@@ -1,4 +1,5 @@
-RSpec.describe 'Apidocs', type: :request do
+RSpec.describe 'Apidocs', type: :request,
+                          skip: ENV['INCLUDE_API_DOCS'] != 'true' do
   it 'is successful' do
     get '/apidocs'
 

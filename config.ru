@@ -7,7 +7,8 @@ require 'rack/cors'
 use Rack::Cors do
   allow do
     origins '*'
-    resource '*', headers: :any, methods: %i[get post patch put]
+    resource '*', headers: :any,
+                  methods: %i[get post patch put delete options head]
   end
 end
 
