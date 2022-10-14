@@ -1,31 +1,34 @@
 RSpec.describe 'GlookoLogging' do
   let(:logger_class) { Class.new { include Base::GlookoLogging } }
+  let(:logger) { logger_class.new }
   let(:severity) { 'warn' }
   let(:test_log) do
-    logger_class.new.log(severity,
-                         {fog: 'test'},
-                         __LINE__,
-                         __method__,
-                         __FILE__)
+    logger.log(severity,
+               {fog: 'test'},
+               __LINE__,
+               __method__,
+               __FILE__)
   end
 
-  it 'logs expected output with json data' do
-    expect { test_log }.to output(/fog/).to_stdout
-  end
+  context 'when the severity is warn' do
+    it 'logs expected output with json data' do
+      expect { test_log }.to output(/fog/).to_stdout
+    end
 
-  it 'logs expected output with correct file name' do
-    expect { test_log }.to output(/glooko_logging_spec.rb/).to_stdout
-  end
+    it 'logs expected output with correct file name' do
+      expect { test_log }.to output(/glooko_logging_spec.rb/).to_stdout
+    end
 
-  it 'logs expected output with correct line number' do
-    expect { test_log }.to output(/7/).to_stdout
-  end
+    it 'logs expected output with correct line number' do
+      expect { test_log }.to output(/8/).to_stdout
+    end
 
-  it 'log gets called with correct arguments' do
-    test_log do
-      expect(logger_class.new)
+    it 'log gets called with correct arguments' do
+      allow(logger).to receive(:log)
+      test_log
+      expect(logger)
         .to have_received(:log)
-        .with('warn', {fog: 'test'}, 6, :test_log, 'glooko_logging_spec.rb')
+        .with(severity, {fog: 'test'}, 8, :test_log, /glooko_logging_spec.rb/)
     end
   end
 
