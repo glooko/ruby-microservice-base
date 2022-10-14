@@ -16,6 +16,7 @@ gem 'rubocop-rspec', require: false
 gem "dry-types"
 gem "puma"
 gem "rake"
+gem "json"
 
 group :development, :test do
   gem "dotenv"

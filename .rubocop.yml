@@ -55,7 +55,7 @@ Metrics/BlockLength:
   - 'app/swagger/**/*'
 
 Metrics/MethodLength:
-  CountComments: false 
+  CountComments: false
   Max: 15
   Exclude:
   - 'app/swagger/**/*'
@@ -131,4 +131,3 @@ Gemspec/RequireMFA:
 
 RSpec/MultipleMemoizedHelpers:
   Max: 10
-  

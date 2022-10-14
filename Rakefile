@@ -1,1 +1,1 @@
-require "hanami/rake_tasks"
+require 'hanami/rake_tasks'
