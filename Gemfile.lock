@@ -262,6 +262,7 @@ DEPENDENCIES
   hanami-rspec
   hanami-utils (~> 2.0.0.beta1)
   hanami-validations (~> 2.0.0.beta1)
+  json
   mongoid (~> 8.0, >= 8.0.2)
   mongoid-rspec (~> 4.1)
   oj
@@ -281,4 +282,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.22
+   2.3.23
