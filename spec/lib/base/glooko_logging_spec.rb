@@ -38,7 +38,7 @@ RSpec.describe 'GlookoLogging' do
       end
     end
 
-    context 'for error seveirty' do
+    context 'for error severity' do
       let(:severity) { 'error' }
 
       it 'logs expected severity' do
