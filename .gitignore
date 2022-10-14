@@ -1,0 +1,21 @@
+# Ignore .orig files that are generated when resolving merge conflicts
+*.orig
+
+# Ignore byebug history
+.byebug_history
+
+# Ignore all logfiles and tempfiles.
+*.log
+/tmp
+
+# Ignore mac file
+.DS_Store
+
+# Ignore local configuration.
+/.env
+
+# Ignore code coverage folder
+coverage/
+
+.vscode
+.idea
